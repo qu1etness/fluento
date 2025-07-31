@@ -3,7 +3,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/templates/header";
 import { ThemeProvider } from '@/components/theme-provider';
-import { Search } from 'lucide-react';
 import { NavigationMenu } from '@/templates/navigation-menu';
 
 const poppins = Poppins({
@@ -36,7 +35,7 @@ export default function RootLayout({
     >
       <div className={'w-full min-h-screen flex'}>
         <Header />
-        <main className={'flex-1 h-full w-full px-12 pt-10 pb-4'}>
+        <main className={'flex-1 h-full w-full px-12 py-10'}>
           <NavigationMenu/>
           {children}
         </main>
