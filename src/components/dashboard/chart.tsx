@@ -33,19 +33,19 @@ const chartConfig = {
 export function Chart() {
   return (
     <div className={'col-span-3 justify-start items-center'}>
-      <div className={'w-full h-full max-h-[318px]'}>
+      <div className={'w-full h-full max-h-[318px] bg-black-white p-8 rounded-3xl'}>
         <ChartContainer config={chartConfig} className="max-h-full w-full">
           <LineChart data={chartData}
                      accessibilityLayer
                      margin={{
                        left: 12,
-                       right: 12
+                       right: 12,
+                       top: 4
                      }}
-
           >
             <Line
               dataKey="learned"
-              type="natural"
+              type="bumpX"
               stroke="var(--color-learned)"
               fill="none"
               strokeWidth={4}
@@ -53,7 +53,7 @@ export function Chart() {
             />
             <Line
               dataKey="noted"
-              type="natural"
+              type="bumpX"
               stroke="var(--color-noted)"
               fill="none"
               strokeWidth={4}

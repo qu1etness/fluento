@@ -10,7 +10,6 @@ import HomeLogo from '../../../public/svgs/home.svg';
 import { NavLink } from '@/components/header/nav-link';
 import { headerVariants } from '@/lib/anim';
 import { ComponentProps, JSX } from 'react';
-import { Home } from 'lucide-react';
 
 const links: {
   logo: (props?: ComponentProps<'svg'>) => JSX.Element;

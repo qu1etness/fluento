@@ -9,7 +9,7 @@ import PremiumBanner from "@/components/header/premium-banner";
 import { headerVariants } from '@/lib/anim';
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
   return (
     <motion.div

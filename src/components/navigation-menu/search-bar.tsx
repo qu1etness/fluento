@@ -12,37 +12,52 @@ import {
 import { useSearchBarToggle } from '@/hooks/use-search-bar-toggle';
 
 interface ISearchGroup {
-  group: {
     name: string;
     content:
       {
         title: string;
         path: string;
       }[];
-  };
 }
 
 const searchList: ISearchGroup[] = [
   {
-    group: {
-      name: 'Dashboard',
-      content: [
-        {
-          title: 'Word sets',
-          path: '/dashboard'
-        },
-        {
-          title: 'Statistic',
-          path: '/dashboard'
-        },
-        {
-          title: 'Quick start',
-          path: '/dashboard'
-        },
-      ]
-    },
+    name: 'Dashboard',
+    content: [
+      {
+        title: 'Word sets',
+        path: '/dashboard'
+      },
+      {
+        title: 'Statistic',
+        path: '/dashboard'
+      },
+      {
+        title: 'Quick start',
+        path: '/dashboard'
+      }
+    ]
+  },
+  {
+    name: 'Dictionary',
+    content: [
+      {
+        title: 'Translation',
+        path: '/dictionary'
+      },
+      {
+        title: 'Words',
+        path: '/dictionary'
+      },
+      {
+        title: 'Dictionary',
+        path: '/dictionary'
+      }
+    ]
   }
-]
+
+];
+
 
 const SearchBar = () => {
 
@@ -73,8 +88,8 @@ const SearchBar = () => {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           {searchList.map((item, index) => (
-            <CommandGroup key={index} heading={item.group.name}>
-              {item.group.content.map((item, index) => (
+            <CommandGroup key={index} heading={item.name}>
+              {item.content.map((item, index) => (
                 <CommandItem className={'cursor-pointer'} key={index}>{item.title}</CommandItem>
               ))}
             </CommandGroup>
